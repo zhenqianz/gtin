@@ -43,7 +43,7 @@ module GTIN
       i.even? ? (even += number[i].chr.to_i) : (odd += number[i].chr.to_i)
     end
     
-    number[0].chr.to_i == (10 - ((odd * 3) + even) % 10)
+    number[0].chr.to_i == (10 - ((odd * 3) + even) % 10) % 10
   end
 
 
